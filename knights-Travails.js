@@ -1,11 +1,8 @@
-/*
-Board representation -> matrix.
-  
-  - 1 start of our knight.
-  - 2 target.
-Posibles Movments (?)
-  - 2 matrix one for posibles movments (?)
-*/ 
+const Coordinates = require('./Coordinates');
+const Tree = require('./Tree');
+
+let coor = new Coordinates(5, 6)
+console.log(coor);
 
 let gameBoard = 
 [
