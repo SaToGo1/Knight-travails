@@ -100,20 +100,40 @@ class Tree {
         return arrMov;
     }
 
-    // search(coor){
+    /**
+     * 
+     * @param {Coordinates} target search for a coordinates in the solution tree.
+     * @returns return the closest node with the target coordinates.
+     */
+    search(target){
 
-    //     let queue = [];
-    //     let root = this.root;
-    //     queue.push(root);
+        let queue = [];
+        let root = this.root;
+        queue.push(root);
 
-    //     let node = this._searchRec(queue, coor);
+        let node = this._searchRec(queue, target);
 
-    //     return node;
-    // }
+        return node;
+    }
 
-    // _searchRec(){
+    _searchRec(queue, target){
+        if(queue.length === 0){
+            return null;
+        }
 
-    // }
+        let root = queue.shift();
+        // if coordinates from root are equal to target coordinates
+        if(root.coor.isEqual(target)){
+            return root;
+        }
+
+        let childs = root.childs;
+        for(let i = 0; i < childs.length; i++){
+            queue.push(childs[i]);
+        }
+
+        return this._searchRec(queue, target);
+    }
 }
 
 module.exports = Tree;

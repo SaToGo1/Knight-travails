@@ -8,9 +8,9 @@ let gameBoard =
     [0, 0, 0, 0, 0, 0, 0, 0], // 2
     [0, 0, 0, 0, 0, 0, 0, 0], // 3
     [0, 0, 0, 0, 0, 0, 0, 0], // 4
-    [0, 0, 0, 0, 1, 0, 0, 0], // 5
+    [0, 0, 0, 0, 0, 0, 0, 0], // 5
     [0, 0, 0, 0, 0, 0, 0, 0], // 6
-    [0, 0, 0, 0, 0, 0, 2, 0], // 7
+    [0, 0, 0, 0, 0, 0, 0, 0], // 7
     [0, 0, 0, 0, 0, 0, 0, 0]  // 8
 ]
 
@@ -21,7 +21,13 @@ console.log(node);
 
 let solutionTree = new Tree(node);
 solutionTree.buildTree();
-
-// let coorTarget = new Coordinates(7, 7);
-
 console.log(solutionTree);
+
+
+let coorTarget = new Coordinates(7, 7);
+let nodeTarget = solutionTree.search(coorTarget);
+
+console.log('target Coordinates');
+console.log(coorTarget);
+console.log('target Node');
+console.log(nodeTarget);
