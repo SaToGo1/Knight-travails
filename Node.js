@@ -4,6 +4,7 @@ class Node{
 
     constructor(coor){
         this.coor = coor;
+        this.childs = null;
     }
 }
 
