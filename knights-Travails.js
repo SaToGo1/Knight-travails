@@ -31,3 +31,24 @@ console.log('target Coordinates');
 console.log(coorTarget);
 console.log('target Node');
 console.log(nodeTarget);
+
+let path = buildPath(nodeTarget);
+logPath(path);
+
+function buildPath(node){
+    let path = [];
+    while( node.father != null){
+        path.push(node.coor);
+        node = node.father;
+    }
+    path.push(node.coor);
+    path.reverse();
+    return path;
+}
+
+function logPath(path){
+    for(let i = 0; i < path.length; i++){
+        let coordinates = path[i];
+        console.log(`on ${i} is x: ${coordinates.x} y:${coordinates.y}`)
+    }
+}

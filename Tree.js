@@ -8,6 +8,7 @@ class Tree {
     }
 
     /**
+     * Build the solution Tree.
      * 
      * @param {Node} root: initial node of the tree or subtree.
      * @param {Number} depth: Max depth of the solution tree.
@@ -38,6 +39,7 @@ class Tree {
     }
 
     /**
+     * From a specific coordinates we check and return the possible movements.
      * 
      * @param {Coordinates} coordinates initial position of the knight.
      * @returns array of the possible movements.
@@ -101,6 +103,7 @@ class Tree {
     }
 
     /**
+     * Search for the closest node which coordinates are equal to target coordinates.
      * 
      * @param {Coordinates} target search for a coordinates in the solution tree.
      * @returns return the closest node with the target coordinates.
